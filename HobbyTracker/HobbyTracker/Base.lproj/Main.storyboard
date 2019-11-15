@@ -58,6 +58,9 @@
                                                 <constraint firstItem="V1Y-Co-WMC" firstAttribute="leading" secondItem="wcY-sy-8Xh" secondAttribute="leadingMargin" id="hUX-fh-2E8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oHS-VY-NJU" kind="show" id="wkb-eo-8SK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -82,6 +85,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="104.46428571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BBG-8l-4h3">
+            <objects>
+                <viewController id="oHS-VY-NJU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v4Y-N8-2Vq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzX-1m-sdq">
+                                <rect key="frame" x="20" y="121" width="188" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nzX-1m-sdq" secondAttribute="height" multiplier="1:1" id="rD5-On-BZd"/>
+                                    <constraint firstAttribute="height" constant="150" id="ust-kV-dml"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pu-XG-whs">
+                                <rect key="frame" x="347" y="160" width="47" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hometown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2s-AD-yYi">
+                                <rect key="frame" x="319" y="189" width="75" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="List of hobbies" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fV4-XV-qXm">
+                                <rect key="frame" x="20" y="427" width="374" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hobbies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21O-lp-YYA">
+                                <rect key="frame" x="20" y="280" width="102" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g35-kb-sCl" firstAttribute="bottom" secondItem="fV4-XV-qXm" secondAttribute="bottom" constant="20" id="0az-4Z-XPu"/>
+                            <constraint firstItem="n2s-AD-yYi" firstAttribute="top" secondItem="0pu-XG-whs" secondAttribute="bottom" constant="8" id="4o9-Wa-TVZ"/>
+                            <constraint firstItem="g35-kb-sCl" firstAttribute="trailing" secondItem="0pu-XG-whs" secondAttribute="trailing" constant="20" id="7ij-oo-4m5"/>
+                            <constraint firstItem="g35-kb-sCl" firstAttribute="bottom" secondItem="fV4-XV-qXm" secondAttribute="bottom" id="7rQ-6T-Z5f"/>
+                            <constraint firstItem="0pu-XG-whs" firstAttribute="top" secondItem="g35-kb-sCl" secondAttribute="top" constant="20" id="GbT-CD-o8m"/>
+                            <constraint firstItem="21O-lp-YYA" firstAttribute="top" secondItem="nzX-1m-sdq" secondAttribute="bottom" constant="30" id="LHh-22-zDt"/>
+                            <constraint firstItem="fV4-XV-qXm" firstAttribute="leading" relation="lessThanOrEqual" secondItem="21O-lp-YYA" secondAttribute="leading" constant="8" id="NNw-CR-vsH"/>
+                            <constraint firstItem="fV4-XV-qXm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="21O-lp-YYA" secondAttribute="bottom" constant="8" id="dMW-xg-wnR"/>
+                            <constraint firstItem="fV4-XV-qXm" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="n2s-AD-yYi" secondAttribute="trailing" constant="8" id="egw-GK-oUD"/>
+                            <constraint firstItem="g35-kb-sCl" firstAttribute="trailing" secondItem="n2s-AD-yYi" secondAttribute="trailing" constant="20" id="mKp-6P-NWY"/>
+                            <constraint firstItem="21O-lp-YYA" firstAttribute="leading" secondItem="nzX-1m-sdq" secondAttribute="leading" id="zee-m9-AVQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g35-kb-sCl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y48-yc-rfJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9h-Mu-naj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2079.7101449275365" y="522.99107142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6tl-Oo-aCC">
